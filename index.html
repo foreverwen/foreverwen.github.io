@@ -188,7 +188,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/demo/">demo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/hello/">hello</a></li></ul>
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/javascript/">javascript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/web/">web</a></li></ul>
                     </div>
                 </section>
                 
@@ -269,69 +269,6 @@
 </nav>
       <div class="body-wrap">
   
-    <article id="post-hello-1" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2017/03/03/hello-1/" class="article-date">
-      <time datetime="2017-03-03T12:43:01.000Z" itemprop="datePublished">2017-03-03</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/03/hello-1/">hello</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <p>欢迎来到<a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>!这是你的第一篇博文。</p>
-<h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><h3 id="创建一篇新博文"><a href="#创建一篇新博文" class="headerlink" title="创建一篇新博文"></a>创建一篇新博文</h3><p>$ hexo new post “My New Post”</p>
-<p>更多信息…</p>
-<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>谢谢你使用 Hexo.</p>
-
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/demo/">demo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hello/">hello</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -379,6 +316,80 @@
       
 
       
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-jsnote" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/03/jsnote/" class="article-date">
+      <time datetime="2016-12-03T12:43:01.000Z" itemprop="datePublished">2016-12-03</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/12/03/jsnote/">js总结笔记</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>学习中所做的笔记，希望能帮到初学者。</p>
+<h2 id="javascript"><a href="#javascript" class="headerlink" title="javascript"></a>javascript</h2><p>输出内容（document.write）<br>1.输出内容内容用“”括起来，直接输出“”内的内容<br>  Document.write(“I love javascript”);<br>2.通过变量，输出内容<br>  Document.write(mynum); //直接输变量名，不用“”<br>3.输出多项内容，中间用+连接<br>4.输出HTML标签，并起作用，标签用“”括起来    </p>
+<p>警告 alert   window.alert<br>用法同上，变量不加“”   多项内容用+连接      </p>
+<p>确认 （confirm消息对话框）<br>Confirmstr(str);  str:在对话框中要显示的文本  返回值：boolean值    </p>
+<p>提问 (prompt 消息对话框)<br>Prompt(str1,str2);     str1:要显示在消息对话框中的内容，不可修改<br>Str2：文本框中的内容，可以修改（注意中间是逗号隔开，而不是加号  str2一般是函数名）    </p>
+<p>打开新窗口  (window.open)    </p>
+<p>关闭窗口  window.close    </p>
+<p>控制Dom流<br>1.通过元素获取元素  document.getElementById(“id”)<br>2.innerHTML属性     object.innerHTML         object是获取的元素对象，如通过document.getElementById(“id”)获取的元素<br>3.改变HTML样式   object.style.property=new style;    object是获取的元素对象<br>4.显示和隐藏  display属性  object.style.display = value   其值 none为隐藏；block为将此元素设置为块级元素，即显示<br>5.控制类名   object.className = classname      作用：获取元素的class属性；为网页内的某个元素指定一个class样式来更改该元素的外观。<br>Object为获取的元素对象     classname为样式表中定义的css样式类名</p>
+<ol>
+<li>Imgs[0].offsetwidth  第一个图片的宽度，<br>7.Imgs[i].style.left =     即为相对于左侧的相对定位，=后面跟变量或（加）具体数值，<br>要加单位px，</li>
+<li>parseInt（）   将字符串转化成数值    </li>
+</ol>
+<p>创建数组 var myarray = new Array();   var myarray保存数组的变量    new Array创建一个新的空数组，还可指定长度    </p>
+<p>事件  主要事件罗列<br>1.onclick 鼠标点击事件<br>2.Onmouseover 鼠标经过事件<br>3.Onmouseout 鼠标移出事件<br>4.Onchange 文本框内容改变事件<br>5.Onselect 文本框内容被选中事件<br>6.Onfocus 光标聚集事件<br>7.Onblur  光标移开事件<br>8.Onload网页导入事件(一般写在body标签内)<br>9.Onunload 关闭网页事件</p>
+<p>更多信息…</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/javascript/">javascript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/web/">web</a></li></ul>
+    </div>
+
       
       <div class="clearfix"></div>
     </div>
