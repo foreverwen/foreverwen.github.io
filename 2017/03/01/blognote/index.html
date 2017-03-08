@@ -15,12 +15,16 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="MrLi's blog">
-<meta property="og:url" content="http://llwen.cn/tags/hexo-blog/index.html">
+<meta name="description" content="参考别人的构建方法并加以完善">
+<meta property="og:type" content="article">
+<meta property="og:title" content="基于hexo的github page 博客搭建步骤">
+<meta property="og:url" content="http://llwen.cn/2017/03/01/blognote/index.html">
 <meta property="og:site_name" content="MrLi's blog">
+<meta property="og:description" content="参考别人的构建方法并加以完善">
+<meta property="og:updated_time" content="2017-03-08T03:05:20.832Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MrLi's blog">
+<meta name="twitter:title" content="基于hexo的github page 博客搭建步骤">
+<meta name="twitter:description" content="参考别人的构建方法并加以完善">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Tag: -hexo -blog | MrLi&#39;s blog</title>
+<title>基于hexo的github page 博客搭建步骤 | MrLi&#39;s blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -62,9 +66,9 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
-        isTag: true,
+        isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
@@ -262,56 +266,172 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-blognote" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2017" class="archive-year">2017</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-          <div class="article-meta">
-              <a href="/2017/03/01/blognote/" class="archive-article-date">
-      <time datetime="2017-03-01T14:37:46.000Z" itemprop="datePublished">03-01</time>
+    <div class="article-meta">
+      <a href="/2017/03/01/blognote/" class="article-date">
+      <time datetime="2017-03-01T14:37:46.000Z" itemprop="datePublished">2017-03-01</time>
 </a>
 
 
-        </div>
-         
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2017/03/01/blognote/">基于hexo的github page 博客搭建步骤</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      基于hexo的github page 博客搭建步骤
     </h1>
   
 
-        <div class="article-info info-on-archive">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 
-          
+        
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo-blog/">-hexo -blog</a></li></ul>
     </div>
 
-        </div>
         <div class="clearfix"></div>
-    </header>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p>希望可以帮到大家</p>
+<h2 id="hexo-blog"><a href="#hexo-blog" class="headerlink" title="hexo blog"></a>hexo blog</h2><p>1.安装hexo<br>首先计算机中必需有Node.js, Git<br>在电脑中键入以下代码确认安装结果<br>node -v<br>git –version<br>确认安装成功后安装hexo<br>npm install hexo-cli -g<br>然后进入你想要保存的一个目录作为存放博客的根目录，右键选git bush here ,然后键入<br>hexo init blog<br>cd blog<br>npm install<br>hexo server<br>成功的话，终端输出以下结果<br>INFO Start processing<br>INFO Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>.  Press Ctrl+C to stop<br>现在就可以在<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. 网站访问到</p>
+<ol>
+<li>添加博文<br>在博客目录下右键git bush here,然后键入<br>hexo new post &lt;博文名称&gt;<br>然后会显示出新文档目录，为.md文件，自定义编辑它<br>然后git键入hexo server并保持运行，在<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. 可以看到新更新的博文    </li>
+</ol>
+<p>3.与github page 关联<br>注册github账号，然后创建名为&lt;用户名&gt;.github.io的仓库<br>然后为这个仓库添加ssh密匙，详细步骤参见官方教程    </p>
+<p>4.本地配置并上传数据<br>先安装hexo-deployer-git 插件，键入<br>npm install hexo-deploy-git –save<br>然后在博客的根目录下有一个_config.yml文件，这是博客的主配置文件，配置deployment项<br>将刚才创建的仓库地址添加到repo后面<br>然后在博客的根目录git后键入<br>hexo generate<br>hexo deploy<br>现在就可以在  <a href="http://用户名.github.io" target="_blank" rel="external">http://用户名.github.io</a>  看到你自己的博客了    </p>
+<p>5.绑定自自己域名<br>先在万网，西部数码等网站购买域名，然后解析到github page的ip<br>在本地ping下自己主页的ip<br>本地命令行键入 ping 用户名.github.io 就会显示出ip地址<br>在域名购买网站解析两个a到自己主页的ip<br>在博客的根目录下创建一个名为CNAME的文件，里面内容填你自己购买的域名<br>在github page页面填写你的域名，点击save保存    </p>
+<p>6.同步数据，创建成功<br>在博客根目录git键入<br>hexo generate<br>hexo deploy<br>现在就可以用自己域名访问你自己的博客网站了。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2>
+      
+    </div>
+    
   </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2017/03/01/blognote/">基于hexo的github page 博客搭建步骤</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">MrLi</a></p>
+        <p><span>发布时间:</span>2017-03-01, 22:37:46</p>
+        <p><span>最后更新:</span>2017-03-08, 11:05:20</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/01/blognote/" title="基于hexo的github page 博客搭建步骤">http://llwen.cn/2017/03/01/blognote/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://llwen.cn/2017/03/01/blognote/　　作者: MrLi" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/02/07/jsnote2/">
+                    jsnote2
+                </a>
+            </div>
+        
+    </nav>
+
+  
 </article>
-  
-  
-    </div></section>
-  
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#hexo-blog"><span class="toc-number">1.</span> <span class="toc-text">hexo blog</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#结语"><span class="toc-number">2.</span> <span class="toc-text">结语</span></a></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"基于hexo的github page 博客搭建步骤　| MrLi's blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
 
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/02/07/jsnote2/" title="下一篇: jsnote2">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/03/01/blognote/">基于hexo的github page 博客搭建步骤</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/02/07/jsnote2/">jsnote2</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/28/jsnote/">js总结笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/15/hello-world/">Hello World</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
